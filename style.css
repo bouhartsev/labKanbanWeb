@@ -74,6 +74,57 @@ main {
 	margin: auto;
 }
 
+.addTask {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	width: 100%;
+	height: 200px;
+
+	box-sizing: border-box;
+	padding: 20px 0;
+	font-size: 20px;
+}
+
+.addTask input {
+	height: 2.5em;
+	box-sizing: border-box;
+	font-size: inherit;
+}
+
+.lblNew, input[name="taskText"] {
+	margin-right: 1em;
+}
+
+input[name="taskText"] {
+	border: none;
+	border-bottom: 2px var(--black) solid;
+	outline:none;
+
+	padding: 1em;
+	max-width: 100%;
+}
+
+input[name="taskText"]::placeholder {
+	color: darkgray;
+}
+
+input[type="submit"] {
+	border: none;
+	outline:none;
+	border-radius: 0.8em;
+	padding: 0 0.5em;
+
+	background: var(--red);
+	color: var(--gray);
+	box-shadow: 4px 4px 10px -5px var(--black);
+}
+
+input[type="submit"]:hover{
+	cursor: pointer;
+}
+
 .columns {
 	display: flex;
 	justify-content: space-between;
@@ -98,8 +149,15 @@ main {
 
 .columns h2 {
 	margin: 0.5em 0;
+	font-size: 2em;
 }
 
 .columns h2::first-letter {
 	text-transform: uppercase;
+}
+
+@media(max-width: 400px) {
+	body {
+		zoom: 0.8;
+	}
 }
