@@ -1,3 +1,5 @@
+/*Matvey Bouhartsev, 2021*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
@@ -126,10 +128,13 @@ input[type="submit"] {
 	background: var(--red);
 	color: var(--gray);
 	box-shadow: 4px 4px 10px -5px var(--black);
+	transition: transform .1s, box-shadow .1s;
 }
 
 input[type="submit"]:hover{
 	cursor: pointer;
+	transform: scale(1.05);
+	box-shadow: 4px 4px 15px -5px var(--black);
 }
 
 .columns {
@@ -179,6 +184,8 @@ input[type="submit"]:hover{
 	margin: 15px 0;
 
 	font-size: 1.2em;
+
+	animation: addTask 1s ease-in-out 1;
 }
 
 .card .head {
@@ -222,10 +229,14 @@ input[type="submit"]:hover{
 
 	position: absolute;
 	bottom: 20px;
+
+	transition: transform .1s, box-shadow .1s;
 }
 
 .card button:hover {
 	cursor: pointer;
+	transform: scale(1.05);
+	box-shadow: 4px 4px 5px -5px var(--black);
 }
 
 footer {
@@ -245,6 +256,20 @@ footer a {
 
 footer p {
 	margin: 0;
+}
+
+footer *::selection {
+	color: var(--blue) !important;
+	background: var(--gray) !important;
+}
+
+@keyframes addTask {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
 }
 
 @media(max-width: 400px) {

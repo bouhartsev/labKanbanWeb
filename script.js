@@ -1,3 +1,5 @@
+//Matvey Bouhartsev, 2021
+
 function addTask(event){
 	var text = document.forms['addTask'].elements['taskText'].value;
 	var elem = document.createElement('div');
