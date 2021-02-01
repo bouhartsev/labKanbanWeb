@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Матвей Бухарцев, экзамен</title>
+
     <link rel="stylesheet" href="/style.css">
+
     <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
@@ -22,8 +25,13 @@
     		<p>Kanban — метод управления разработкой, реализующий принцип «точно в срок».</p>
     	</div>
     </header>
+
     <main>
-    	<form action="" class="addTask" id="addTask">
+    	<noscript>
+			Ваш браузер не <a href="https://enable-javascript.com/ru">поддерживает</a> скрипты! <br> Your browser does not <a href="https://enable-javascript.com/ru">support</a> JavaScript!
+		</noscript>
+
+    	<form action="#" class="addTask" id="addTask">
     		<label for="taskText" class="lblNew">Новая задача</label>
     		<input type="text" placeholder="Описание задачи" name="taskText" id="taskText">
     		<input type="submit" value="+ добавить" onclick="addTask(event)">
@@ -97,7 +105,8 @@
     <footer>
     	<p>Матвей Александрович Бухарцев, 201-321</p>
     	<p><time datetime="2021-02-01 09:00">01.02.2021</time></p>
-    	<p><a href="">Эта страница на сервере</a></p>
+    	<p><a href="http://bouhartsev.std-1374.ist.mospolytech.ru/course1/session1/">Эта страница на сервере</a></p>
+    	<p>*Примечание: перенос элементов реализован специально, в рамках адаптивной вёрстки.</p>
     </footer>
     <script type="text/javascript" src="/script.js"></script>
 </body>
