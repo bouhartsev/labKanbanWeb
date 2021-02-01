@@ -15,7 +15,8 @@ body {
 
 	background: var(--gray) url('/img/top_sh_en.png');
 	background-repeat: no-repeat;
-	background-position: right bottom;
+	background-position: 10vw bottom;
+	background-size: 110% auto;
 }
 
 header {
@@ -53,7 +54,6 @@ h1 {
 }
 
 .description {
-/*	min-width: 30%;*/
 	width: 400px;
 	height: 100%;
 	margin: 0 20px;
@@ -70,6 +70,36 @@ h1 {
 }
 
 main {
-	width: 80%;
+	width: 75%;
 	margin: auto;
+}
+
+.columns {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.columns>div {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	background: rgba(254,254,254,0.7);
+	border: 1px var(--black) dashed;
+
+	padding: 20px;
+	margin-bottom: 40px;
+	min-width: 250px;
+	width: 25%;
+	min-height: 500px;
+	height: fit-content;
+}
+
+.columns h2 {
+	margin: 0.5em 0;
+}
+
+.columns h2::first-letter {
+	text-transform: uppercase;
 }
