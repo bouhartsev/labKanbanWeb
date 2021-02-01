@@ -6,3 +6,70 @@
 	--blue: #30475e;
 	--black: #222831;
 }
+
+body {
+	height: fit-content;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+
+	background: var(--gray) url('/img/top_sh_en.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+header {
+	width: 100%;
+	min-height: 100px;
+	height: fit-content;
+	background-color: var(--red);
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.title {
+	width: fit-content;
+	height: fit-content;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.title .logo {
+	height: 100px;
+	margin: 0 20px;
+}
+
+h1 {
+	white-space: nowrap;
+	margin: 20px 30px;
+}
+
+.description {
+/*	min-width: 30%;*/
+	width: 400px;
+	height: 100%;
+	margin: 0 20px;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.description .info {
+	height: 50px;
+	margin: 0 10px;
+}
+
+main {
+	width: 80%;
+	margin: auto;
+}
