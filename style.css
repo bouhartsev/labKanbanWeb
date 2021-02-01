@@ -156,6 +156,49 @@ input[type="submit"]:hover{
 	text-transform: uppercase;
 }
 
+.card {
+	position: relative;
+	min-height: 375px;
+	height: fint-content;
+	width: 100%;
+	background: var(--gray);
+}
+
+.card .check {
+	right: 80px;
+	background: url('/img/check.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .pencil {
+	background: url('/img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .pencil, .card .cross {
+	right: 15px;
+}
+
+.card button {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+
+	border: none;
+	outline: none;
+
+	background-size: 50% !important;
+	background-position: center !important;
+
+	position: absolute;
+	bottom: 20px;
+}
+
+.card button:hover {
+	cursor: pointer;
+}
+
+
+
+
 @media(max-width: 400px) {
 	body {
 		zoom: 0.8;
