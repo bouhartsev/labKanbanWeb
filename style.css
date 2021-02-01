@@ -7,16 +7,23 @@
 	--black: #222831;
 }
 
+::selection {
+	color: white;
+	background: var(--blue);
+}
+
 body {
 	height: fit-content;
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
 
+	color: var(--black);
+
 	background: var(--gray) url('/img/top_sh_en.png');
 	background-repeat: no-repeat;
-	background-position: 10vw bottom;
-	background-size: 110% auto;
+	background-position: 15vw calc(100% - 80px);
+	background-size: 105% auto;
 }
 
 header {
@@ -158,10 +165,31 @@ input[type="submit"]:hover{
 
 .card {
 	position: relative;
-	min-height: 375px;
+	min-height: 350px;
 	height: fint-content;
 	width: 100%;
 	background: var(--gray);
+
+	box-shadow: 4px 4px 10px -5px var(--black);
+
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px;
+	padding-bottom: 90px;
+	margin: 15px 0;
+
+	font-size: 1.2em;
+}
+
+.card .head {
+	font-size: 1.3em;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 1em;
+}
+
+.card p {
+	margin: 0;
 }
 
 .card .check {
@@ -171,6 +199,10 @@ input[type="submit"]:hover{
 
 .card .pencil {
 	background: url('/img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .cross {
+	background: url('/img/x.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
 }
 
 .card .pencil, .card .cross {
@@ -196,8 +228,24 @@ input[type="submit"]:hover{
 	cursor: pointer;
 }
 
+footer {
+	background: var(--blue);
+	color: white;
 
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
 
+footer a {
+	color: white;
+}
+
+footer p {
+	margin: 0;
+}
 
 @media(max-width: 400px) {
 	body {
