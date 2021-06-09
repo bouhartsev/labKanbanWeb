@@ -29,7 +29,7 @@ body {
 
 	color: var(--black);
 
-	background: var(--gray) url('./img/top_sh_en.png');
+	background: var(--gray) url('../img/top_sh_en.png');
 	background-repeat: no-repeat;
 	background-position: 15vw calc(100% - 80px);
 	background-size: 105% auto;
@@ -301,21 +301,21 @@ input[type="submit"]:hover{
 
 .card .check {
 	right: 80px;
-	background: url('./img/check.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
-	background: url('./img/check.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
-	background: url('./img/check.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/check.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
+	background: url('../img/check.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/check.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
 }
 
 .card .pencil {
-	background: url('./img/pencil.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
-	background: url('./img/pencil.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
-	background: url('./img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/pencil.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
+	background: url('../img/pencil.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
 }
 
 .card .cross {
-	background: url('./img/x.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
-	background: url('./img/x.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
-	background: url('./img/x.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/x.svg') no-repeat, -webkit-gradient(linear, left top, left bottom, color-stop(-15%, var(--gray)), color-stop(50%, var(--blue)));
+	background: url('../img/x.svg') no-repeat, -o-linear-gradient(var(--gray) -15%, var(--blue) 50%);
+	background: url('../img/x.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
 }
 
 .card .pencil, .card .cross {
