@@ -1,5 +1,5 @@
 <template>
-  <label for="themeToggler" class="togglerLabel">Theme
+  <label for="themeToggler" class="togglerLabel">Theme 
     <div class="wrap">
       <input type="checkbox" id="themeToggler" />
       <div class="totoro">
@@ -44,100 +44,104 @@ $b: #222;
 $y: #ffffff;
 $gr: #a6cd52;
 $color: white;
-
 body {
   .togglerLabel {
+    zoom: 0.5;
     display: flex;
     font-size: 2.5rem;
     align-items: center;
+    margin-right: 2em;
+    cursor: pointer;
+  }
+  * {
+    transform-style: preserve-3d;
   }
   .wrap {
-      margin-left: 15px;
-      float:right;
-    cursor: pointer;
-    
-    $width: 100px;
-    $one_px: 1px; //275
-    width: 275*$one_px;
-    height: 100*$one_px;
+    margin-left: 1em;
+    width: 275px;
+    height: 100px;
     position: relative;
-    box-shadow: 0 0 0 2*$one_px #eee, 0 0 40*$one_px 0*$one_px rgba(0, 0, 0, 0.15);
-    border-radius: (500*$one_px);
+    box-shadow: 0 0 0 2px #eee, 0 0 40px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 500px;
     background: #fff;
+    cursor: pointer;
     * {
-      cursor: pointer;
       transition: 0.25s linear;
+      cursor: pointer;
     }
     .totoro {
       position: absolute;
-      width: 36%;
-      height: 150%;
-      left: 0*$one_px;
-      top: -30*$one_px;
+      width: 100px;
+      height: 150px;
+      left: 0px;
+      top: -30px;
       background: $g;
-      border-radius: (170*$one_px) (170*$one_px) (100*$one_px) (100*$one_px) / (300*$one_px) (300*$one_px) (200*$one_px) (200*$one_px);
+      border-radius: 170px 170px 100px 100px / 300px 300px 200px 200px;
       z-index: 2;
+      &:after {
+        z-index: 2;
+        transform: translateZ(10px);
+      }
       .ears {
         position: absolute;
         width: 90%;
-        height: 40*$one_px;
+        height: 40px;
         left: 5%;
         .ear {
           position: absolute;
-          width: 10*$one_px;
-          height: 25*$one_px;
+          width: 10px;
+          height: 25px;
           background: $g;
-          top: -10*$one_px;
-          left: 7.5*$one_px;
-          border-radius: (700*$one_px) (700*$one_px) (500*$one_px) (500*$one_px) / (2750*$one_px) (2750*$one_px) (500*$one_px) (500*$one_px);
+          top: -10px;
+          left: 7.5px;
+          border-radius: 700px 700px 500px 500px / 2750px 2750px 500px 500px;
           &:after {
             content: "";
             position: absolute;
-            width: 4*$one_px;
-            height: 15*$one_px;
+            width: 4px;
+            height: 15px;
             background: $g;
-            left: calc(50% - 2*$one_px);
-            bottom: -15*$one_px;
+            left: calc(50% - 2px);
+            bottom: -15px;
           }
           &:nth-of-type(2) {
             left: auto;
-            right: 7.5*$one_px;
+            right: 7.5px;
           }
         }
       }
       .foot {
-        width: 40*$one_px;
-        height: 20*$one_px;
+        width: 40px;
+        height: 20px;
         background: $g;
         position: absolute;
         bottom: 0;
-        left: 5*$one_px;
-        $bord_rad_loc2: (300*$one_px) (200*$one_px) (200*$one_px) (200*$one_px) / (200*$one_px) (100*$one_px) (100*$one_px) (100*$one_px);
-        border-radius: $bord_rad_loc2;
+        left: 5px;
+        border-radius: 300px 200px 200px 200px / 200px 100px 100px 100px;
         transform-origin: top right;
         transform: rotate(0deg) scaleY(1) scaleX(1);
         &.two {
           left: auto;
-          right: 5*$one_px;
+          right: 5px;
           transform-origin: top left;
-          border-radius: $bord_rad_loc2;
+          border-radius: 200px 300px 200px 200px / 100px 200px 100px 100px;
         }
       }
       .arm {
-        width: 25*$one_px;
-        height: 60*$one_px;
+        width: 25px;
+        height: 60px;
         background: $g;
         position: absolute;
-        left: 0*$one_px;
+        left: 0px;
         z-index: -1;
-        top: 50*$one_px;
-        border-radius: (550*$one_px) (100*$one_px) (400*$one_px) (400*$one_px) / (700*$one_px) (200*$one_px) (600*$one_px) (800*$one_px);
+        top: 50px;
+        border-radius: 550px 100px 400px 400px / 700px 200px 600px 800px;
         transform: rotate(10deg);
         transform-origin: top right;
         &:nth-of-type(2) {
           left: auto;
-          right: 0*$one_px;
-          border-radius: (100*$one_px) (550*$one_px) (400*$one_px) (400*$one_px) / (200*$one_px) (700*$one_px) (800*$one_px) (600*$one_px);
+          right: 0px;
+          border-radius: 100px 550px 400px 400px / 200px 700px 800px 600px;
           transform: rotate(-10deg);
           transform-origin: top left;
         }
@@ -146,7 +150,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        border-radius: (170*$one_px) (170*$one_px) (100*$one_px) (100*$one_px) / (300*$one_px) (300*$one_px) (200*$one_px) (200*$one_px);
+        border-radius: 170px 170px 100px 100px / 300px 300px 200px 200px;
         left: 0;
         top: 0;
         overflow: hidden;
@@ -156,111 +160,110 @@ body {
           width: 90%;
           height: 57.5%;
           background: $y;
-          bottom: 10*$one_px;
+          bottom: 10px;
           left: 5%;
-          $bord_rad_loc: (300*$one_px) (300*$one_px) (300*$one_px) (300*$one_px) / (300*$one_px) (300*$one_px) (500*$one_px) (500*$one_px);
-          border-radius: $bord_rad_loc;
+          border-radius: 300px 300px 300px 300px / 300px 300px 500px 500px;
           &:before {
             content: "";
             position: absolute;
             width: 100%;
             height: 100%;
             background: $y;
-            border-radius: $bord_rad_loc;
+            border-radius: 300px 300px 300px 300px / 300px 300px 500px 500px;
           }
           .spot {
             content: "";
             position: absolute;
-            width: 15*$one_px;
-            height: 15*$one_px;
-            border-radius: (50*$one_px);
-            box-shadow: 0 -5*$one_px 0 darken($g, 20%);
-            left: calc(50% - 6.5*$one_px);
-            top: 10*$one_px;
-            transform: translateZ(20*$one_px) scaleX(0.75) scale(0.75);
+            width: 15px;
+            height: 15px;
+            border-radius: 50px;
+            box-shadow: 0 -5px 0 darken($g, 20%);
+            left: calc(50% - 6.5px);
+            top: 10px;
+            transform: translateZ(20px) scaleX(0.75) scale(0.75);
             &:nth-of-type(2),
             &:nth-of-type(3) {
-              top: 15*$one_px;
-              left: calc(50% - 25*$one_px);
+              top: 15px;
+              left: calc(50% - 25px);
             }
             &:nth-of-type(3) {
-              left: calc(50% + 10*$one_px);
+              left: calc(50% + 10px);
             }
             &:nth-of-type(n + 4) {
-              top: 30*$one_px;
-              left: 10*$one_px;
+              top: 30px;
+              left: 10px;
             }
             &:nth-of-type(5) {
-              left: 30*$one_px;
+              left: 30px;
             }
             &:nth-of-type(6) {
-              left: 50*$one_px;
+              left: 50px;
             }
             &:nth-of-type(7) {
-              left: 70*$one_px;
+              left: 70px;
             }
             &:before,
             &:after {
               content: "";
               position: absolute;
-              width: 5*$one_px;
-              height: 10*$one_px;
+              width: 5px;
+              height: 10px;
               background: darken($g, 20%);
               border-radius: 200%;
-              left: -2.5*$one_px;
+              left: -2.5px;
               transform: rotate(45deg);
-              bottom: 10*$one_px;
+              bottom: 10px;
             }
             &:after {
               transform: rotate(-45deg);
-              left: 10*$one_px;
+              left: 10px;
             }
           }
         }
         .inner {
           position: absolute;
           width: 100%;
-          height: 30*$one_px;
-          top: 15*$one_px;
+          height: 30px;
+          top: 15px;
           &:before {
             content: "";
             position: absolute;
-            width: 17.5*$one_px;
-            height: 6*$one_px;
+            width: 17.5px;
+            height: 6px;
             background: #222;
-            left: calc(50% - 8.75*$one_px);
-            top: 10*$one_px;
-            border-radius: (200*$one_px) (200*$one_px) (100*$one_px) (100*$one_px) / (100*$one_px) (100*$one_px) (50*$one_px) (50*$one_px);
+            left: calc(50% - 8.75px);
+            top: 10px;
+            border-radius: 200px 200px 100px 100px / 100px 100px 50px 50px;
           }
           .mouth {
             position: absolute;
-            width: 50*$one_px;
-            height: 10*$one_px;
+            width: 50px;
+            height: 10px;
             background: repeating-linear-gradient(
               to right,
               #fff,
-              #fff 10*$one_px,
-              #222 10*$one_px,
-              #222 11*$one_px,
-              #fff 11*$one_px
+              #fff 10px,
+              #222 10px,
+              #222 11px,
+              #fff 11px
             );
-            bottom: 0*$one_px;
-            left: calc(50% - 25*$one_px);
-            border-radius: (25*$one_px) (25*$one_px) (300*$one_px) (300*$one_px) / (25*$one_px) (25*$one_px) (200*$one_px) 200*$one_px;
-            box-shadow: inset 0 0 0 (1*$one_px) darken($g, 10%);
+            bottom: 0px;
+            left: calc(50% - 25px);
+            border-radius: 25px 25px 300px 300px / 25px 25px 200px 200px;
+            box-shadow: inset 0 0 0 1px darken($g, 10%);
           }
           .eye {
             position: absolute;
-            top: 5*$one_px;
-            width: 12.5*$one_px;
-            height: 12.5*$one_px;
+            top: 5px;
+            width: 12.5px;
+            height: 12.5px;
             background: $b;
-            left: 20*$one_px;
+            left: 20px;
             border-radius: 100%;
-            box-shadow: inset 0 0 0 (1*$one_px) darken($g, 10%), inset 0 0 0 (4.5*$one_px) #fff;
+            box-shadow: inset 0 0 0 1px darken($g, 10%), inset 0 0 0 4.5px #fff;
             &:nth-of-type(2) {
               left: auto;
-              right: 20*$one_px;
+              right: 20px;
             }
           }
         }
@@ -276,47 +279,53 @@ body {
       opacity: 0;
       &:checked {
         & ~ .totoro {
-          transform: translateX(180*$one_px) translateY(-5*$one_px);
+          transform: translateX(180px) translateY(-5px);
           transition: 0.5s linear;
+          &:before {
+            opacity: 1;
+          }
+          &:after {
+            opacity: 0.25;
+          }
           * {
             transition: 0.5s linear;
           }
           .foot {
             transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition-delay: 0.45s, 0.45s;
-            transform: rotate(-75deg) scaleY(1.5) scaleX(1.5) translateY(-10*$one_px)
-              translateX(10*$one_px);
+            transform: rotate(-75deg) scaleY(1.5) scaleX(1.5) translateY(-10px)
+              translateX(10px);
             &.two {
-              transform: rotate(75deg) scaleY(1.5) scaleX(1.5) translateY(-10*$one_px)
-                translateX(-10*$one_px);
+              transform: rotate(75deg) scaleY(1.5) scaleX(1.5)
+                translateY(-10px) translateX(-10px);
             }
           }
           .arm {
             transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition-delay: 0.45s, 0.45s;
-            transform: rotate(40deg) translateX(7.5*$one_px);
+            transform: rotate(40deg) translateX(7.5px);
             &:nth-of-type(2) {
-              transform: rotate(-40deg) translateX(-7.5*$one_px);
+              transform: rotate(-40deg) translateX(-7.5px);
             }
           }
           .ears {
             .ear {
-              left: 70*$one_px;
+              left: 70px;
               animation: ear1 1s ease-in-out infinite alternate;
               transform-origin: -20% 120%;
               @keyframes ear1 {
                 to {
-                  transform: rotate(5deg) translateY(-2.5*$one_px);
+                  transform: rotate(5deg) translateY(-2.5px);
                 }
               }
               &:nth-of-type(2) {
                 left: auto;
-                right: 70*$one_px;
+                right: 70px;
                 animation: ear2 1s ease-in-out infinite alternate;
                 transform-origin: 120% 120%;
                 @keyframes ear2 {
                   to {
-                    transform: rotate(-5deg) translateY(-2.5*$one_px);
+                    transform: rotate(-5deg) translateY(-2.5px);
                   }
                 }
               }
@@ -324,11 +333,11 @@ body {
           }
           .body {
             .mouth {
-              box-shadow: inset 0 0 0 2*$one_px darken($g, 35%);
-              height: 2*$one_px;
-              bottom: 2.5*$one_px;
-              width: 20*$one_px;
-              left: calc(50% - 10*$one_px);
+              box-shadow: inset 0 0 0 2px darken($g, 35%);
+              height: 2px;
+              bottom: 2.5px;
+              width: 20px;
+              left: calc(50% - 10px);
             }
             .spots {
               &:before {
@@ -341,24 +350,24 @@ body {
                 }
               }
             }
-            .inner {
-              &:before {
-                animation: shake 3s ease-in-out infinite;
-                @keyframes shake {
-                  90% {
-                    transform: translateX(0*$one_px);
+            .inner{
+              &:before{
+                animation:shake 3s ease-in-out infinite;
+                @keyframes shake{
+                  90%{
+                    transform:translateX(0px);
                   }
-                  91% {
-                    transform: translateX(1*$one_px);
+                  91%{
+                    transform:translateX(1px);
                   }
-                  92% {
-                    transform: translateX(0*$one_px);
+                  92%{
+                    transform:translateX(0px);
                   }
-                  93% {
-                    transform: translateX(-1*$one_px);
+                  93%{
+                    transform:translateX(-1px);
                   }
-                  94% {
-                    transform: translateX(0*$one_px);
+                  94%{
+                    transform:translateX(0px);
                   }
                 }
               }
@@ -369,19 +378,19 @@ body {
                 animation: breathe 1s ease-in-out infinite alternate;
                 @keyframes breathe {
                   to {
-                    transform: translateZ(20*$one_px) scaleX(0.8) scale(0.75)
-                      translateY(-5*$one_px) rotateX(-20deg);
+                    transform: translateZ(20px) scaleX(0.8) scale(0.75)
+                      translateY(-5px) rotateX(-20deg);
                   }
                 }
               }
               .eye {
-                box-shadow: inset 0 0 0 1*$one_px darken($g, 35%),
-                  inset 0 0 0 4.5*$one_px #fff;
-                height: 2*$one_px;
-                width: 7.5*$one_px;
-                transform: translateX(7.5*$one_px);
+                box-shadow: inset 0 0 0 1px darken($g, 35%),
+                  inset 0 0 0 4.5px #fff;
+                height: 2px;
+                width: 7.5px;
+                transform: translateX(7.5px);
                 &:nth-of-type(2) {
-                  transform: translateX(-7.5*$one_px);
+                  transform: translateX(-7.5px);
                 }
               }
               animation: roll1 0.5s linear 1 forwards;
@@ -406,4 +415,4 @@ body {
     }
   }
 }
-</style>
+</style> 
