@@ -57,12 +57,12 @@ body {
     cursor: pointer;
     
     $width: 100px;
-    $one_px: 100px/275;
+    $one_px: 1px; //275
     width: 275*$one_px;
     height: 100*$one_px;
     position: relative;
     box-shadow: 0 0 0 2*$one_px #eee, 0 0 40*$one_px 0*$one_px rgba(0, 0, 0, 0.15);
-    border-radius: 500*$one_px;
+    border-radius: (500*$one_px);
     background: #fff;
     * {
       cursor: pointer;
@@ -131,13 +131,13 @@ body {
         left: 0*$one_px;
         z-index: -1;
         top: 50*$one_px;
-        border-radius: 550*$one_px 100*$one_px 400*$one_px 400*$one_px / 700*$one_px 200*$one_px 600*$one_px 800*$one_px;
+        border-radius: (550*$one_px) (100*$one_px) (400*$one_px) (400*$one_px) / (700*$one_px) (200*$one_px) (600*$one_px) (800*$one_px);
         transform: rotate(10deg);
         transform-origin: top right;
         &:nth-of-type(2) {
           left: auto;
           right: 0*$one_px;
-          border-radius: 100*$one_px 550*$one_px 400*$one_px 400*$one_px / 200*$one_px 700*$one_px 800*$one_px 600*$one_px;
+          border-radius: (100*$one_px) (550*$one_px) (400*$one_px) (400*$one_px) / (200*$one_px) (700*$one_px) (800*$one_px) (600*$one_px);
           transform: rotate(-10deg);
           transform-origin: top left;
         }
@@ -146,7 +146,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        border-radius: 170*$one_px 170*$one_px 100*$one_px 100*$one_px / 300*$one_px 300*$one_px 200*$one_px 200*$one_px;
+        border-radius: (170*$one_px) (170*$one_px) (100*$one_px) (100*$one_px) / (300*$one_px) (300*$one_px) (200*$one_px) (200*$one_px);
         left: 0;
         top: 0;
         overflow: hidden;
@@ -173,7 +173,7 @@ body {
             position: absolute;
             width: 15*$one_px;
             height: 15*$one_px;
-            border-radius: 50*$one_px;
+            border-radius: (50*$one_px);
             box-shadow: 0 -5*$one_px 0 darken($g, 20%);
             left: calc(50% - 6.5*$one_px);
             top: 10*$one_px;
@@ -230,7 +230,7 @@ body {
             background: #222;
             left: calc(50% - 8.75*$one_px);
             top: 10*$one_px;
-            border-radius: 200*$one_px 200*$one_px 100*$one_px 100*$one_px / 100*$one_px 100*$one_px 50*$one_px 50*$one_px;
+            border-radius: (200*$one_px) (200*$one_px) (100*$one_px) (100*$one_px) / (100*$one_px) (100*$one_px) (50*$one_px) (50*$one_px);
           }
           .mouth {
             position: absolute;
@@ -246,8 +246,8 @@ body {
             );
             bottom: 0*$one_px;
             left: calc(50% - 25*$one_px);
-            border-radius: 25*$one_px 25*$one_px 300*$one_px 300*$one_px / 25*$one_px 25*$one_px 200*$one_px 200*$one_px;
-            box-shadow: inset 0 0 0 1*$one_px darken($g, 10%);
+            border-radius: (25*$one_px) (25*$one_px) (300*$one_px) (300*$one_px) / (25*$one_px) (25*$one_px) (200*$one_px) 200*$one_px;
+            box-shadow: inset 0 0 0 (1*$one_px) darken($g, 10%);
           }
           .eye {
             position: absolute;
@@ -257,7 +257,7 @@ body {
             background: $b;
             left: 20*$one_px;
             border-radius: 100%;
-            box-shadow: inset 0 0 0 1*$one_px darken($g, 10%), inset 0 0 0 4.5*$one_px #fff;
+            box-shadow: inset 0 0 0 (1*$one_px) darken($g, 10%), inset 0 0 0 (4.5*$one_px) #fff;
             &:nth-of-type(2) {
               left: auto;
               right: 20*$one_px;
