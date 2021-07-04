@@ -9,14 +9,18 @@
 	--black: #222831;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+.overflow-hidden {
+	overflow-y: hidden;
+}
+
 ::selection {
 	color: white;
 	background: var(--blue);
 }
-
-/* ::-webkit-scrollbar {
-    display: none;
-} */
 
 body {
 	height: fit-content;
