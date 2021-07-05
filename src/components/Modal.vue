@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div class="modal" v-if="show">
-      <div class="modal__backdrop" @click="closeModal()"/>
+      <div class="modal__backdrop" @click="closeModal()" />
 
       <div class="modal__dialog">
         <div class="modal__header">
@@ -42,7 +42,10 @@ export default {
       document.querySelector("body").classList.remove("overflow-hidden");
     },
     openModal() {
-      document.documentElement.style.setProperty("--margin-top", window.scrollY+"px");
+      document.documentElement.style.setProperty(
+        "--margin-top",
+        window.scrollY + "px"
+      );
       this.show = true;
       document.querySelector("body").classList.add("overflow-hidden");
     },
@@ -59,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 :root {
-    --margin-top: 50px;
+  --margin-top: 50px;
 }
 
 .modal {
@@ -72,7 +75,7 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
-  margin-top:var(--margin-top);
+  margin-top: var(--margin-top);
   &__backdrop {
     position: fixed;
     top: 0;

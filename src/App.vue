@@ -1,24 +1,18 @@
 <template>
   <div id="app">
-    <Modal ref="modalTask" class='addTask'>
+    <Modal ref="modalTask" class="addTask">
       <template v-slot:header>
         <b>Task</b>
       </template>
 
       <template v-slot:body>
-        <input type="hidden" value="-1" id="taskID">
-        <input type="hidden" value="0" id="taskList">
+        <input type="hidden" value="-1" id="taskID" />
+        <input type="hidden" value="0" id="taskList" />
         <label for="taskText" class="lblNew">Description</label>
-        <input
-          type="text"
-          placeholder="About task"
-          id="taskText"
-        />
-        <br>
+        <input type="text" placeholder="About task" id="taskText" />
+        <br />
         <label for="taskPriority" class="lblNew">Priority</label>
-        <select
-          id="taskPriority"
-        >
+        <select id="taskPriority">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -27,8 +21,22 @@
 
       <template v-slot:footer>
         <div class="d-flex align-items-center justify-content-between">
-          <button class="btn--secondary" type="reset" @click="$refs.modalTask.closeModal()">Cancel</button>
-          <button class="btn--primary" @click="$refs.componentLists.saveItem();$refs.modalTask.closeModal();">Save</button>
+          <button
+            class="btn--secondary"
+            type="reset"
+            @click="$refs.modalTask.closeModal()"
+          >
+            Cancel
+          </button>
+          <button
+            class="btn--primary"
+            @click="
+              $refs.componentLists.saveItem();
+              $refs.modalTask.closeModal();
+            "
+          >
+            Save
+          </button>
         </div>
       </template>
     </Modal>
@@ -47,9 +55,11 @@
     	</div> -->
     </header>
     <main>
-      <button @click="$refs.modalTask.openModal()" class="btn--primary addTask">New task</button>
+      <button @click="$refs.modalTask.openModal()" class="btn--primary addTask">
+        New task
+      </button>
 
-      <Lists ref="componentLists"/>
+      <Lists ref="componentLists" />
     </main>
     <footer>
       <p>Matvey Bouhartsev, 201-321</p>
