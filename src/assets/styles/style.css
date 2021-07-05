@@ -1,0 +1,307 @@
+/*Matvey Bouhartsev, 2021*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+	--gray: #e8e8e8;
+	--red: #f05454;
+	--blue: #30475e;
+	--black: #222831;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.overflow-hidden {
+	overflow-y: hidden;
+}
+
+::selection {
+	color: white;
+	background: var(--blue);
+}
+
+body {
+	height: fit-content;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+
+	color: var(--black);
+
+	background: var(--gray);
+	/* url('../img/top_sh_en.png') */
+	background-repeat: no-repeat;
+	background-position: 15vw calc(100% - 80px);
+	background-size: 105% auto;
+}
+
+header {
+	width: 100%;
+	min-height: 100px;
+	height: fit-content;
+	background-color: var(--red);
+
+	display: flex;
+	        flex-direction: row;
+	        align-items: center;
+	        justify-content: space-between;
+	    flex-wrap: wrap;
+}
+
+.title {
+	width: fit-content;
+	height: fit-content;
+
+	display: flex;
+	        flex-direction: row;
+	        align-items: center;
+	        justify-content: space-between;
+	    flex-wrap: wrap;
+}
+
+.title .logo {
+	height: 100px;
+	margin: 0 20px;
+}
+
+h1 {
+	white-space: nowrap;
+	margin: 20px 30px;
+}
+
+.description {
+	width: 400px;
+	height: 100%;
+	margin: 0 20px;
+	display: flex;
+	        flex-direction: row;
+	        align-items: center;
+	        justify-content: space-between;
+}
+
+.description .info {
+	height: 50px;
+	margin: 0 10px;
+}
+
+main {
+	width: 75%;
+	margin: auto;
+	text-align: left;
+}
+
+.addTask {
+	font-size: 20px;
+}
+
+.addTask.btn--primary {
+	margin: 20px 0;
+}
+
+.addTask * {
+	font-size: inherit;
+}
+
+.addTask input, .addTask select {
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: 2px var(--black) solid;
+}
+
+.lblNew {
+	margin-right: 1em;
+}
+
+input[name="taskText"] {
+	padding: 0.5em;
+	max-width: 100%;
+}
+
+input[name="taskText"]::placeholder {
+	color: darkgray;
+}
+
+.btn--primary {
+	border-radius: 5px;
+	padding: 0.5em;
+
+	background: var(--red);
+	color: var(--gray);
+	        box-shadow: 4px 4px 10px -5px var(--black);
+	transition: transform .1s, box-shadow .1s;
+}
+
+.btn--secondary {
+	margin-right: 10px;
+}
+
+.btn--primary:hover, .btn--primary:focus {
+	transform: scale(1.05);
+	box-shadow: 4px 4px 15px -5px var(--black);
+}
+
+.columns {
+	display: flex;
+	        justify-content: space-between;
+	    flex-wrap: wrap;
+}
+
+.columns>div {
+	display: flex;
+	        flex-direction: column;
+	        align-items: flex-start;
+
+	background: rgba(254,254,254,0.7);
+	border: 1px var(--black) dashed;
+
+	padding: 20px;
+	margin-bottom: 40px;
+	min-width: 250px;
+	width: 25%;
+	min-height: 500px;
+
+	height: fit-content;
+}
+
+.columns h2 {
+	margin: 0.5em 0;
+	font-size: 2em;
+}
+
+.columns h2::first-letter {
+	text-transform: uppercase;
+	background: inherit;
+}
+
+.card {
+	position: relative;
+	min-height: 350px;
+	height: fit-content;
+	width: 100%;
+	background: var(--gray);
+
+	        box-shadow: 4px 4px 10px -5px var(--black);
+			box-sizing: border-box;
+	border-radius: 15px;
+	padding: 15px;
+	padding-bottom: 90px;
+	margin: 15px 0;
+
+	font-size: 1.2em;
+	animation: addTask 0.3s ease-in-out 1;
+	cursor: move;
+}
+
+.card .head {
+	font-size: 1.3em;
+	text-align: center;
+	font-weight: 500;
+	margin-bottom: 1em;
+}
+
+.text {
+	margin: 0;
+}
+
+.priority {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.card .check {
+	background: url('../img/check.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .pencil {
+	right: 15px;
+	background: url('../img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .cross {
+	background: url('../img/x.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card .check, .card .cross {
+	right: 80px;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: inherit;
+	cursor: pointer;
+}
+
+.card button {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+
+	background-size: 50% !important;
+	background-position: center !important;
+
+	position: absolute;
+	bottom: 20px;
+
+	transition: transform .1s, box-shadow .1s;
+
+	will-change: transform;
+}
+
+.card button:hover, .card button:focus {
+	cursor: pointer;
+	        transform: scale(1.05);
+	        box-shadow: 4px 4px 5px -5px var(--black);
+}
+
+footer {
+	background: var(--blue);
+	color: white;
+
+	width: 100%;
+	        box-sizing: border-box;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
+
+footer a {
+	color: white;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer *::selection {
+	color: var(--blue) !important;
+	background: var(--gray) !important;
+}
+
+@-webkit-keyframes addTask {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+@keyframes addTask {
+	0% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+@media(max-width: 400px) {
+	body {
+		zoom: 0.8;
+	}
+}

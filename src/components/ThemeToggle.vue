@@ -1,5 +1,6 @@
 <template>
-  <label for="themeToggler" class="togglerLabel">Theme 
+  <label for="themeToggler" class="togglerLabel"
+    >Theme
     <div class="wrap">
       <input type="checkbox" id="themeToggler" />
       <div class="totoro">
@@ -46,12 +47,15 @@ $gr: #a6cd52;
 $color: white;
 body {
   .togglerLabel {
-    zoom: 0.5;
+    zoom: 0.4;
     display: flex;
     font-size: 2.5rem;
     align-items: center;
-    margin-right: 2em;
+    margin: 2em;
     cursor: pointer;
+  }
+  #themeToggler:focus ~ .togglerLabel {
+    color: white;
   }
   * {
     transform-style: preserve-3d;
@@ -166,6 +170,7 @@ body {
           &:before {
             content: "";
             position: absolute;
+            right: 0;
             width: 100%;
             height: 100%;
             background: $y;
@@ -296,8 +301,8 @@ body {
             transform: rotate(-75deg) scaleY(1.5) scaleX(1.5) translateY(-10px)
               translateX(10px);
             &.two {
-              transform: rotate(75deg) scaleY(1.5) scaleX(1.5)
-                translateY(-10px) translateX(-10px);
+              transform: rotate(75deg) scaleY(1.5) scaleX(1.5) translateY(-10px)
+                translateX(-10px);
             }
           }
           .arm {
@@ -350,24 +355,24 @@ body {
                 }
               }
             }
-            .inner{
-              &:before{
-                animation:shake 3s ease-in-out infinite;
-                @keyframes shake{
-                  90%{
-                    transform:translateX(0px);
+            .inner {
+              &:before {
+                animation: shake 3s ease-in-out infinite;
+                @keyframes shake {
+                  90% {
+                    transform: translateX(0px);
                   }
-                  91%{
-                    transform:translateX(1px);
+                  91% {
+                    transform: translateX(1px);
                   }
-                  92%{
-                    transform:translateX(0px);
+                  92% {
+                    transform: translateX(0px);
                   }
-                  93%{
-                    transform:translateX(-1px);
+                  93% {
+                    transform: translateX(-1px);
                   }
-                  94%{
-                    transform:translateX(0px);
+                  94% {
+                    transform: translateX(0px);
                   }
                 }
               }
@@ -415,4 +420,4 @@ body {
     }
   }
 }
-</style> 
+</style>
