@@ -2,7 +2,7 @@
   <label for="themeToggler" class="togglerLabel"
     >Theme
     <div class="wrap">
-      <input type="checkbox" id="themeToggler" />
+      <input type="checkbox" id="themeToggler" v-model="theme" />
       <div class="totoro">
         <div class="ears">
           <div class="ear"></div>
@@ -36,6 +36,27 @@
 <script>
 export default {
   name: "ThemeToggle",
+  data() {
+    return {
+      theme: false,
+    };
+  },
+  mounted() {
+    if (
+      sessionStorage["theme"] == "true" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.theme = true;
+    } else this.theme = false;
+  },
+  watch: {
+    theme: function (val) {
+      sessionStorage["theme"] = val;
+      let variant = document.documentElement;
+      if (val) variant.setAttribute("theme", "dark");
+      else variant.setAttribute("theme", "light");
+    },
+  },
 };
 </script>
 

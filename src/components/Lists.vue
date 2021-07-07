@@ -29,9 +29,15 @@
           class="check"
           @click="changePos(item.id, list.id + 1)"
           v-if="list.id != 2"
-        ></button>
-        <button class="cross" @click="deleteItem(item.id)" v-else></button>
-        <button class="pencil" @click="editItem(item.id)"></button>
+        >
+          <img src="@/assets/img/check.svg" alt="Check" />
+        </button>
+        <button class="cross" @click="deleteItem(item.id)" v-else>
+          <img src="@/assets/img/x.svg" alt="Delete" />
+        </button>
+        <button class="pencil" @click="editItem(item.id)">
+          <img src="@/assets/img/pencil.svg" alt="Edit" />
+        </button>
       </div>
     </div>
   </section>
