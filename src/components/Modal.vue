@@ -88,7 +88,6 @@ export default {
   &__dialog {
     position: relative;
     width: 600px;
-    background-color: #ffffff;
     border-radius: 5px;
     margin: 50px auto;
     display: flex;
@@ -116,6 +115,9 @@ export default {
   }
   &__footer {
     padding: 10px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .fade-enter-active,

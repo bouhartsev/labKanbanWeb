@@ -20,24 +20,22 @@
       </template>
 
       <template v-slot:footer>
-        <div class="d-flex align-items-center justify-content-between">
-          <button
-            class="btn--secondary"
-            type="reset"
-            @click="$refs.modalTask.closeModal()"
-          >
-            Cancel
-          </button>
-          <button
-            class="btn--primary"
-            @click="
-              $refs.componentLists.saveItem();
-              $refs.modalTask.closeModal();
-            "
-          >
-            Save
-          </button>
-        </div>
+        <button
+          class="btn--secondary"
+          type="reset"
+          @click="$refs.modalTask.closeModal()"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn--primary"
+          @click="
+            $refs.componentLists.saveItem();
+            $refs.modalTask.closeModal();
+          "
+        >
+          Save
+        </button>
       </template>
     </Modal>
 

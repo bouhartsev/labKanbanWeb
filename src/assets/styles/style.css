@@ -7,6 +7,15 @@
 	--red: #f05454;
 	--blue: #30475e;
 	--black: #222831;
+	--white: white;
+}
+
+:root[theme='dark'] {
+	--gray: #3a3a3a;
+	--red: #7c0000;
+	--blue: #0057ad;
+	--black: whitesmoke;
+	--white: black;
 }
 
 html {
@@ -37,6 +46,11 @@ body {
 	background-size: 105% auto;
 }
 
+body>* {
+	transition-property: color, background-color;
+	transition-duration: 0.3s;
+}
+
 header {
 	width: 100%;
 	min-height: 100px;
@@ -44,10 +58,10 @@ header {
 	background-color: var(--red);
 
 	display: flex;
-	        flex-direction: row;
-	        align-items: center;
-	        justify-content: space-between;
-	    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .title {
@@ -55,15 +69,21 @@ header {
 	height: fit-content;
 
 	display: flex;
-	        flex-direction: row;
-	        align-items: center;
-	        justify-content: space-between;
-	    flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .title .logo {
 	height: 100px;
 	margin: 0 20px;
+	transition: filter 0.4s;
+}
+
+
+:root[theme='dark'] .title .logo {
+	filter: invert(100%);
 }
 
 h1 {
@@ -76,9 +96,9 @@ h1 {
 	height: 100%;
 	margin: 0 20px;
 	display: flex;
-	        flex-direction: row;
-	        align-items: center;
-	        justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .description .info {
@@ -111,6 +131,19 @@ main {
 	border-bottom: 2px var(--black) solid;
 }
 
+.modal__dialog {
+	background-color: var(--white);
+}
+
+.modal__body>* {
+	color: inherit;
+	background-color: transparent;
+}
+
+option {
+	background-color: var(--white);
+}
+
 .lblNew {
 	margin-right: 1em;
 }
@@ -129,13 +162,18 @@ input[name="taskText"]::placeholder {
 	padding: 0.5em;
 
 	background: var(--red);
-	color: var(--gray);
-	        box-shadow: 4px 4px 10px -5px var(--black);
+	color: var(--black);
+	box-shadow: 4px 4px 10px -5px var(--black);
 	transition: transform .1s, box-shadow .1s;
 }
 
 .btn--secondary {
 	margin-right: 10px;
+	color: inherit;
+}
+
+.btn--secondary:focus {
+	outline: black solid 1px;
 }
 
 .btn--primary:hover, .btn--primary:focus {
@@ -145,16 +183,16 @@ input[name="taskText"]::placeholder {
 
 .columns {
 	display: flex;
-	        justify-content: space-between;
-	    flex-wrap: wrap;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .columns>div {
 	display: flex;
-	        flex-direction: column;
-	        align-items: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
 
-	background: rgba(254,254,254,0.7);
+	background: var(--white);
 	border: 1px var(--black) dashed;
 
 	padding: 20px;
@@ -183,7 +221,7 @@ input[name="taskText"]::placeholder {
 	width: 100%;
 	background: var(--gray);
 
-	        box-shadow: 4px 4px 10px -5px var(--black);
+	box-shadow: 4px 4px 10px -5px var(--black);
 			box-sizing: border-box;
 	border-radius: 15px;
 	padding: 15px;
@@ -191,7 +229,7 @@ input[name="taskText"]::placeholder {
 	margin: 15px 0;
 
 	font-size: 1.2em;
-	animation: addTask 0.3s ease-in-out 1;
+	/* animation: addTask 0.3s ease-in-out 1; */
 	cursor: move;
 }
 
@@ -212,17 +250,16 @@ input[name="taskText"]::placeholder {
 	top: 10px;
 }
 
-.card .check {
-	background: url('../img/check.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
+.card button {
+	background: linear-gradient(var(--gray) -15%, var(--blue) 50%);
+}
+
+.card button img {
+	width: 60%;
 }
 
 .card .pencil {
 	right: 15px;
-	background: url('../img/pencil.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
-}
-
-.card .cross {
-	background: url('../img/x.svg') no-repeat, linear-gradient(var(--gray) -15%, var(--blue) 50%);
 }
 
 .card .check, .card .cross {
@@ -234,6 +271,7 @@ button {
 	border: none;
 	outline: inherit;
 	cursor: pointer;
+	backface-visibility: hidden;
 }
 
 .card button {
@@ -254,8 +292,8 @@ button {
 
 .card button:hover, .card button:focus {
 	cursor: pointer;
-	        transform: scale(1.05);
-	        box-shadow: 4px 4px 5px -5px var(--black);
+	transform: scale(1.05);
+	box-shadow: 4px 4px 5px -5px var(--black);
 }
 
 footer {
@@ -263,7 +301,7 @@ footer {
 	color: white;
 
 	width: 100%;
-	        box-sizing: border-box;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 10px;
 	text-align: center;
